@@ -31,21 +31,18 @@ public partial class ContratacaoHopedagem : ContentPage
 				QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
 				QntAdultos = Convert.ToInt32(stp_adultos.Value),
 				QntCriancas = Convert.ToInt32(stp_criancas.Value),
-				DataCheckin = dtpck_checkin.Date,
-				DataCheckout = dtpck_checkin.Date,
+				DataCheckIn = dtpck_checkin.Date,
+				DataCheckOut = dtpck_checkout.Date,
 			};
-
-
 
 			await Navigation.PushAsync(new HospedagemContratada()
 			{
 				BindingContext = h
 			});
 
-		}
-		catch (Exception ex)
+		}catch (Exception ex)
 		{
-			DisplayAlert("Ops", ex.Message, "OK");
+			await DisplayAlert("Ops", ex.Message, "OK");
 		}
 	}
 

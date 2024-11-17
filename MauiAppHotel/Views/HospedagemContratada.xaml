@@ -14,17 +14,21 @@
                FontSize="50"
                HorizontalTextAlignment="Center"/>
 
-        <Frame Margin="10" BackgroundColor="Black">
+        <Frame Margin="10" BackgroundColor="Black"  >
             <HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <Label Text="Adultos: "
-                           TranslationX="20"
+                    <Label Text="Adultos: " 
+                           TranslationX="10"/>
+                    <Label Text="{Binding QntAdultos}"                           
+                           TranslationX="15"
                            TextColor="White"/>
                 </HorizontalStackLayout>
                 
                 <HorizontalStackLayout>
-                    <Label Text="Crianças: "
-                           TranslationX="170"
+                    <Label Text="Crianças: " 
+                           TranslationX="120"/>
+                    <Label Text="{Binding QntCriancas}"
+                           TranslationX="125"
                            TextColor="White"/>
                 </HorizontalStackLayout>             
             </HorizontalStackLayout>                              
@@ -40,6 +44,13 @@
                        TranslationX="20" TextColor="White"/>
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"
                        TranslationX="50" TextColor="White"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn}"/>
+                
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut}" TranslationX="20"/>
+                
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" TranslationX="70"/>
+                
             </Grid>
         </Frame>
 
@@ -47,6 +58,7 @@
             <HorizontalStackLayout>
                 <Label Text="Valor Total: R$"
                        TextColor="White"/>
+                <Label Text="{Binding ValorTotal}"/>
             </HorizontalStackLayout>
         </Frame>
 
