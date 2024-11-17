@@ -12,8 +12,8 @@
             Text="Cálculo da Diária"
             FontFamily="Kalam-Light"
             FontSize="50"
-            TextColor="White"/>
-        <Frame Padding="10" BackgroundColor="white">
+            TextColor="Gray"/>
+        <Frame Padding="10" BackgroundColor="Gray">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
@@ -29,7 +29,7 @@
 
                     <Stepper Grid.Row="0" Grid.Column="2"
                              x:Name="stp_adultos"
-                             Minimum="0"    
+                             Minimum="0"                             
                              Maximum="10"
                              Increment="1"
                              BackgroundColor="Black"/>
@@ -59,7 +59,8 @@
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua Acomodação"
                         TitleColor="Black"
-                        Background="Black"/>
+                        Background="Black"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">

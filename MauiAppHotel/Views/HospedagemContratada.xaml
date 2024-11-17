@@ -6,7 +6,7 @@
              BackgroundColor="Black">
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="10"
-                         BackgroundColor="White">
+                         BackgroundColor="Gray">
 
         <Label Text="Suíte Super Luxo"
                TextColor="Black"

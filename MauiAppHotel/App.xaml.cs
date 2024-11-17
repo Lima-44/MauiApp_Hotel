@@ -4,7 +4,7 @@ namespace MauiAppHotel
 {
     public partial class App : Application
     {
-        public List<Quarto> lista_quartos = new List<Quarto>
+        private List<Quarto> lista_quartos = new List<Quarto>
         {
             new Quarto()
             {
@@ -39,6 +39,8 @@ namespace MauiAppHotel
             MainPage = new NavigationPage(new Views.ContratacaoHopedagem());
 
         }
+
+        internal List<Quarto> Lista_quartos { get => lista_quartos; set => lista_quartos = value; }
 
         protected override Window CreateWindow(IActivationState? activationState)
         {

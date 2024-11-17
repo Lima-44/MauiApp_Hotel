@@ -10,7 +10,7 @@ public partial class ContratacaoHopedagem : ContentPage
 
 		PropriedadesApp = (App)Application.Current;
 
-		pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
+		pck_quarto.ItemsSource = PropriedadesApp.Lista_quartos;
 	}
 
 	private void Button_Clicked(object sender, EventArgs e)
@@ -25,4 +25,9 @@ public partial class ContratacaoHopedagem : ContentPage
 			DisplayAlert("Ops", ex.Message, "OK");
 		}
 	}
+
+    private void stp_adultos_Unfocused(object sender, FocusEventArgs e)
+    {
+
+    }
 }
