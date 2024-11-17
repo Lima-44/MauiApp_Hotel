@@ -8,7 +8,7 @@
                          Padding="10"
                          BackgroundColor="Gray">
 
-        <Label Text="Suíte Super Luxo"
+        <Label Text="{Binding QuartoSelecionado.Descricao}"
                TextColor="Black"
                FontFamily="Kalam-Light"
                FontSize="50"
