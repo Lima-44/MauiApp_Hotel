@@ -11,6 +11,9 @@ public partial class ContratacaoHopedagem : ContentPage
 		PropriedadesApp = (App)Application.Current;
 
 		pck_quarto.ItemsSource = PropriedadesApp.Lista_quartos;
+
+		dtpck_checkin.MinimumDate = DateTime.Now;
+		dtpck_checkout.MinimumDate = DateTime.Now;
 	}
 
 	private void Button_Clicked(object sender, EventArgs e)
