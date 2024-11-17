@@ -13,8 +13,12 @@ public partial class ContratacaoHopedagem : ContentPage
 		pck_quarto.ItemsSource = PropriedadesApp.Lista_quartos;
 
 		dtpck_checkin.MinimumDate = DateTime.Now;
-		dtpck_checkout.MinimumDate = DateTime.Now;
-	}
+
+		dtpck_checkin.MaximumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
+
+		dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1);
+		dtpck_checkout.MaximumDate = dtpck_checkin.Date.AddMonths(6);
+    }
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
