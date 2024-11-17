@@ -33,8 +33,13 @@ public partial class ContratacaoHopedagem : ContentPage
 		}
 	}
 
-    private void stp_adultos_Unfocused(object sender, FocusEventArgs e)
+    private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
     {
+		DatePicker elemento = sender as DatePicker;
 
+		DateTime data_selecionada_checkin = elemento.Date;
+
+		dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
+		dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
     }
 }
