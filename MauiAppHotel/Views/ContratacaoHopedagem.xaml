@@ -23,6 +23,7 @@
                            TextColor="Black"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
+                           TranslationX="-15"
                            TextColor="Black"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
@@ -32,7 +33,9 @@
                              Minimum="0"                             
                              Maximum="10"
                              Increment="1"
-                             BackgroundColor="Black"/>
+                             BackgroundColor="Black"
+                             TranslationX="-70"
+                             TranslationY="-5"/>
 
 
                     <Label Grid.Row="1" Grid.Column="0"
@@ -40,6 +43,7 @@
                            TextColor="Black"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
+                           TranslationX="-15"
                            TextColor="Black"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_criancas}"/>
@@ -49,15 +53,20 @@
                              Minimum="0"
                              Maximum="10"
                              Increment="1"
-                             Background="Black"/>
+                             Background="Black"
+                             TranslationX="-70"
+                             TranslationY="-5"/>
                 </Grid>
 
 
                 <Label Text="Escolha a sua Suíte"
-                       TextColor="Black"/>
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"/>
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua Acomodação"
+                        HorizontalOptions="Start"
+                        TranslationX="80"
                         TitleColor="Black"
                         Background="Black"
                         ItemDisplayBinding="{Binding Descricao}"/>
