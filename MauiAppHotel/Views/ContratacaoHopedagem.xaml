@@ -74,7 +74,9 @@
                 <Frame Padding="10"
                        Margin="10">
                     <VerticalStackLayout>
-                        <Label Text="Período da Estadia"/>
+                        <Label Text="Período da Estadia"
+                               HorizontalTextAlignment="Center"
+                               TranslationY="-5"/>
                         <HorizontalStackLayout>
                             <Label Text="Check-in :"/>
                             <DatePicker x:Name="dtpck_checkin"

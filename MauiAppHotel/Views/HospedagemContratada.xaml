@@ -45,11 +45,14 @@
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"
                        TranslationX="50" TextColor="White"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn}"/>
-                
-                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut}" TranslationX="20"/>
-                
-                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" TranslationX="70"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"  
+                       TranslationX="20"/>
+                <!--Para tirar a hora que fica abaixo da data usa esse código StringFormat='{}{0:dd/MM/yyyy}'}"/> !--> 
+
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" 
+                       TranslationX="70"/>
                 
             </Grid>
         </Frame>
@@ -57,8 +60,11 @@
         <Frame Margin="10" BackgroundColor="Black">
             <HorizontalStackLayout>
                 <Label Text="Valor Total: R$"
-                       TextColor="White"/>
-                <Label Text="{Binding ValorTotal}"/>
+                    TextColor="White"/>
+                <Label Text= "{Binding ValorTotal}"
+                       TranslationX="2"/>
+                <!-- Para usar o cifrão R$ precisamos usar o código StringFormat='{}{0:c} 
+                Eu usei o cifrão digitando e coloando espaço com o translation no eixo X-->
             </HorizontalStackLayout>
         </Frame>
 

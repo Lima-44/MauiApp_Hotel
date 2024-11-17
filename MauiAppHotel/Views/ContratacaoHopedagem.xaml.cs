@@ -20,6 +20,8 @@ public partial class ContratacaoHopedagem : ContentPage
 
 		dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1);
 		dtpck_checkout.MaximumDate = dtpck_checkin.Date.AddMonths(6);
+
+        
     }
 
 	private async void Button_Clicked(object sender, EventArgs e)
@@ -52,7 +54,6 @@ public partial class ContratacaoHopedagem : ContentPage
 
 		DateTime data_selecionada_checkin = elemento.Date;
 
-		dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
-		dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
+		
     }
 }
